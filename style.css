@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Montserrat:ital,wght@1,200&family=Mooli&family=Raleway:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://www.eusemfronteiras.com.br/wp-content/uploads/2019/07/rolo-de-filme.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(66, 21, 04);
+  color: rgb(214, 139, 71);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Mooli", sans-serif;
+  position: fixed;
+}
+
+header > h2 > i {
+  margin-right: 0.5rem;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+header label {
+  font-size: 1.4rem;
+}
+
+.right-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+#name-movie {
+  width: 220px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid rgb(27, 8, 1);
+  font-size: smaller;
+  cursor: text;
+  background-color: rgb(245, 212, 164);
+  color: rgb(66, 21, 04);
+  margin-right: 20px;
+  outline: none;
+  padding: 8px;
+}
+
+#year-movie {
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid rgb(27, 8, 1);
+  cursor: text;
+  background-color: rgb(245, 212, 164);
+  color: rgb(66, 21, 04);
+  margin-right: 10px;
+  outline: none;
+  padding: 8px;
+}
+
+#search-btn {
+  width: 35px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(245, 212, 164);
+  color: rgb(66, 21, 04);
+  cursor: pointer;
+  outline: none;
+  border: 2px solid rgb(27, 8, 1);
+}
+
+#search:hover {
+  font-size: larger;
+}
+
+main > h1 {
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Mooli" sans-serif;
+  color: rgb(66, 21, 04);
+}
+
+#movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+#movie-list article {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80%;
+  justify-content: space-between;
+  width: 15%;
+  height: 20%;
+}
+
+#movie-list article > img {
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.remove-btn {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: "Mooli", sans-serif;
+  outline: none;
+  color: rgb(27, 8, 1);
+  font-weight: bold;
+  border: 1px solid rgb(27, 8, 1);
+  background-color: rgb(245, 212, 164);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.remove-btn:hover {
+  background-color: rgb(214, 139, 71);
+}
+
+.remove-btn > i {
+  margin-left: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(245, 212, 164);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(66, 21, 04);
+  border-radius: 10px;
+  border: 1px solid rgb(245, 212, 164);
+  size: smaller;
+}
+
+@media all and (max-width: 780px) {
+  header h2 {
+    font-size: 1.2rem;
+  }
+  header label {
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (max-width: 430px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  .right-side {
+    width: 90%;
+  }
+  #movie-list {
+    gap: 2.5rem;
+    transform: translateX(-16px);
+  }
+  #movie-list article {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #movie-list article > img {
+    height: 8rem;
+    width: 6rem;
+  }
+  .remove-btn {
+    padding: auto;
+    width: 6rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .right-side {
+    font-size: 0.8rem;
+  }
+  #movie-list {
+    gap: 2.8rem;
+  }
+}
